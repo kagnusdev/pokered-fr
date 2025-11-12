@@ -11,19 +11,19 @@ DisplayLinkBattleVersusTextBox:
 	hlcoord 4, 10
 	ld de, wLinkEnemyTrainerName
 	call PlaceString
-; place bold "VS" tiles between the names
+; place bold "CONTRE" tiles between the names
 	hlcoord 7, 8
-	ld a, "C"
+	ld a, 'C'
 	ldi [hl], a
-	ld a, "O"
+	ld a, 'O'
 	ldi [hl], a
-	ld a, "N"
+	ld a, 'N'
 	ldi [hl], a
-	ld a, "T"
+	ld a, 'T'
 	ldi [hl], a
-	ld a, "R"
+	ld a, 'R'
 	ldi [hl], a
-	ld [hl], "E"
+	ld [hl], 'E'
 	xor a
 	ld [wUpdateSpritesEnabled], a
 	callfar SetupPlayerAndEnemyPokeballs
